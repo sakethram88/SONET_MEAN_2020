@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Contact Us</title>
+    
 </head>
 <body style="background-color: rgb(255, 135, 92);">
     <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0%;">
@@ -38,7 +39,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="well well-sm">
-                    <form>
+                    <form onSubmit="console.log('Name: '+document.getElementById('name').value + ' Email: '+document.getElementById('email').value + ' Subject: '+document.getElementById('subject').value + ' Message: '+document.getElementById('message').value)">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -82,5 +83,11 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            function myFunction() {
+             var name = document.getElementById("name").value;
+             console.log(name);
+            }
+          </script>
 </body>
 </html>
