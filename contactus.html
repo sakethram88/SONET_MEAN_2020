@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="well well-sm">
-                    <form onSubmit="console.log('Name: '+document.getElementById('name').value + ' Email: '+document.getElementById('email').value + ' Subject: '+document.getElementById('subject').value + ' Message: '+document.getElementById('message').value)">
+                    <form>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                            <button type="submit" class="btn btn-primary pull-right" id="btnContactUs" onclick="showDetails();">
                                 Send Message</button>
                         </div>
                     </div>
@@ -83,11 +83,17 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            function myFunction() {
-             var name = document.getElementById("name").value;
-             console.log(name);
+        <script>
+            function showDetails() {
+                var name = document.getElementById("name").value;
+                console.log("Name is: " + name);
+                var email = document.getElementById("email").value;
+                console.log("Email ID: " + email);
+                var subject = document.getElementById("subject").value;
+                console.log("Subject: " + subject);
+                var message = document.getElementById("message").value;
+                console.log("Message: " + message);
             }
-          </script>
+        </script>
 </body>
 </html>
