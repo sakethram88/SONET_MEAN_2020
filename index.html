@@ -22,7 +22,8 @@
       <div class="navbar-nav">
         <a class="nav-item nav-link active disabled" href="#" tabindex="-1" aria-disabled="true">Home</a>
         <a class="nav-item nav-link" href="gallery.html" >Photo Gallery</a>
-        <a class="nav-item nav-link" href="contactus.html">Contact Us</a><div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        <a class="nav-item nav-link" href="contactus.html">Contact Us</a>
+        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -34,12 +35,12 @@
             </div>
             <div class="modal-body modal-body-fluid" style="background-color: rgb(255, 135, 92);">
               <div class="md-form mb-5">
-                <input type="email" id="defaultForm-email" class="form-control validate">
+                <input type="email" id="defaultForm-email" class="form-control validate" required="required">
                 <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
               </div>
       
               <div class="md-form mb-4">
-                <input type="password" id="defaultForm-pass" class="form-control validate">
+                <input type="password" id="defaultForm-pass" class="form-control validate" required="required">
                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
               </div>
       
@@ -51,8 +52,8 @@
         </div>
       </div>
       
-      <div>
-        <button class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#modalLoginForm">Login</button>
+      <div class="nav navbar-nav navbar-right">
+        <button class="btn btn-dark nav-item" data-toggle="modal" data-target="#modalLoginForm">Login</button>
       </div>
             </div>
           </div>
