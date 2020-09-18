@@ -1,8 +1,7 @@
 let sArray = [];
 function pushData(form, event) {
   event.preventDefault();
-  var sObject = {name: form.name.value, email: form.email.value, section: form.section.value, number: form.number.value,
-  };
+  var sObject = {name: form.name.value, email: form.email.value, section: form.section.value, number: form.number.value};
   sArray.push(sObject);
   showData();
   clearForm(form);

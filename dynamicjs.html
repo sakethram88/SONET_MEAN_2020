@@ -29,7 +29,7 @@
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="index.html">Home</a>
             <a class="nav-item nav-link" href="gallery.html" >Photo Gallery</a>
-            <a class="nav-item nav-link " href="contactus.html">Contact Us</a>
+            <a class="nav-item nav-link" href="contactus.html">Contact Us</a>
             <a class="nav-item nav-link active disabled" href="dynamicjs.html">Join Us</a>
           </div>
         </div>
@@ -66,7 +66,7 @@
                                 <input type="tel" class="form-control" id="number" placeholder="Enter Your Phone Number" required="required"/>
                             </div>
                             <div style="margin-top: 3%;">
-                                <button type="submit" class="btn btn-primary pull-right" id="btnsubmit" onclick="show1()">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnsubmit" onclick="showbtn()">
                                     Send Details</button>
                             </div>
 
@@ -90,7 +90,7 @@
                   </button>
                 </div>
                 <div class="modal-body" style="background-color: rgb(255, 135, 92);">
-                  <div>
+                
                     <table class="table">
                       <thead class="thead-light">
                         <tr>
@@ -109,7 +109,7 @@
                 </div>
         <script src="script.js"></script>
         <script>
-        function show1()
+        function showbtn()
 {
     document.getElementById("dbtn").removeAttribute('disabled');
 }
