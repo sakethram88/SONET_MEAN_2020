@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Join Us</title>
+    
+</head>
+<body style="background-color: rgb(255, 135, 92);">
+    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <h1 class="h1">
+                        Join Us</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 4%;" >
+        <a class="navbar-brand" href="index.html">SONET</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link" href="gallery.html" >Photo Gallery</a>
+            <a class="nav-item nav-link active disabled" href="contactus.html">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <h2 class="col-12">Register to Join SONET</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-sm">
+                    <form onsubmit="pushData(this, event)">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">
+                                    Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required="required" /></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="section">
+                                    Section</label>
+                                <input type="text" class="form-control" id="section" placeholder="Enter Your Section" required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="number">
+                                    Phone Number</label>
+                                <input type="tel" class="form-control" id="number" placeholder="Enter Your Phone Number" required="required"/>
+                            </div>
+                            <div style="margin-top: 3%;">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnsubmit" onclick="show1()">
+                                    Send Details</button>
+                            </div>
+
+                                    <div style="margin-bottom: 5%; margin-top: 3%;">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="dbtn" disabled="disabled"> View Details</button>
+                                    </div>  
+                    </div>
+                    </form>
+                    
+                          </div>
+                </div>
+            </div>
+        </div>
+        <div id="exampleModal" class="modal" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Submitted Details</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div>
+                    <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Section</th>
+                          <th>Number</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          
+                      </tbody>
+                    </table>
+                    <div class="modal-footer">Thank you for your registration! We will get back to you soon.</div>
+                  </div>
+                </div>
+        <script src="script.js"></script>
+        <script>
+        function show1()
+{
+    document.getElementById("dbtn").removeAttribute('disabled');
+}
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
