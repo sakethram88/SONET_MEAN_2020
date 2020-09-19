@@ -12,7 +12,7 @@
   <div class="jumbotron jumbotron-fluid bg-dark">
   
     <div class="jumbotron-background">
-      <img src="Images\igor-kasalovic-tNDvFkxkBHo-unsplash.jpg" class="blur ">
+      <img src="Images\igor-kasalovic-tNDvFkxkBHo-unsplash.jpg" class="blur">
     </div>
     
     <div class="container text-white">
@@ -72,12 +72,12 @@
                                 <input type="tel" class="form-control" id="number" placeholder="Enter Your Phone Number" required="required"/>
                             </div>
                             <div style="margin-top: 3%;">
-                                <button type="submit" class="btn btn-primary pull-right" id="btnsubmit" onclick="showbtn()">
+                                <button type="submit" class="btn btn-primary pull-right" id="btnsubmit" >
                                     Send Details</button>
                             </div>
 
                                     <div style="margin-bottom: 5%; margin-top: 3%;">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="dbtn" disabled="disabled"> View Details</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="dbtn" hidden="true" onclick="showtable()"> View Details</button>
                                     </div>  
                     </div>
                     </form>
@@ -86,18 +86,9 @@
                 </div>
             </div>
         </div>
-        <div id="exampleModal" class="modal" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header" style="background-color: rgb(196, 252, 233);">
-                  <h5 class="modal-title">Submitted Details</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" style="background-color: rgb(255, 135, 92);">
-                
-                    <table class="table">
+        
+                <div class="container" id="detailstable" hidden="true">
+                <table class="table">
                       <thead class="thead-light">
                         <tr>
                           <th>Name</th>
@@ -110,15 +101,15 @@
                           
                       </tbody>
                     </table>
-                    <div class="modal-footer">Thank you for your registration! We will get back to you soon.</div>
-                  </div>
+                    
                 </div>
         <script src="script.js"></script>
         <script>
-        function showbtn()
-{
-    document.getElementById("dbtn").removeAttribute('disabled');
-}
+       function showtable()
+       {
+         document.getElementById("detailstable").removeAttribute("hidden");
+       }
+
         </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

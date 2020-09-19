@@ -5,6 +5,7 @@ function pushData(form, event) {
   sArray.push(sObject);
   showData();
   clearForm(form);
+  document.getElementById("dbtn").removeAttribute('hidden');
 }
 
 function showData() {
