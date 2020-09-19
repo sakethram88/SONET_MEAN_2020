@@ -8,34 +8,46 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-<body style="background-color: rgb(255, 135, 92);">
-  <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0%;">
-    <div class="container">
-      <h1 class="display-4">Welcome to My Photo Gallery</h1>
+<body>
+  <div class="jumbotron jumbotron-fluid bg-dark">
+  
+    <div class="jumbotron-background">
+      <img src="Images\igor-kasalovic-tNDvFkxkBHo-unsplash.jpg" class="blur ">
     </div>
-  </div>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 4%;" >
-    <a class="navbar-brand" href="index.html">SONET</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" href="index.html">Home</a>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Photo Gallery
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(196, 252, 233);">
-            <a class="dropdown-item" href="nature.html">Nature Pictures</a>
-            <a class="dropdown-item" href="food.html">Food Pictures</a>
-          </div>
-        </li>
-        <a class="nav-item nav-link" href="contactus.html">Contact Us</a>
-        <a class="nav-item nav-link" href="dynamicjs.html">Join Us</a>
+    
+    <div class="container text-white">
+      <h1 class="display-4">My Photo Gallery</h1>
+      <div>
+        <hr class="my-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="margin-top: 0%;" >
+          <a class="navbar-brand" style="color: whitesmoke;" href="index.html">SONET</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" style="color: whitesmoke;" href="index.html" tabindex="-1" aria-disabled="true">Home</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Photo Gallery
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rgba(0,0,0,0.3);">
+                  <a class="dropdown-item bg-transparent" style="color: whitesmoke;" href="nature.html">Nature Pictures</a>
+                  <a class="dropdown-item bg-transparent" style="color: whitesmoke;" href="food.html">Food Pictures</a>
+                </div>
+              </li>
+              <a class="nav-item nav-link" style="color: whitesmoke;" href="contactus.html">Contact Us</a>
+              <a class="nav-item nav-link" style="color: whitesmoke;" href="dynamicjs.html">Join Us</a>
+              
+        
+              
+                  </div>
+                </div>
+                
+              </nav>
+              <br>
+              <br>
       </div>
-    </div>
-  </nav>
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -43,7 +55,7 @@
               <a href="nature.html">
                 <img src="Images\loriane-magnenat-PlzDi7mRL4I-unsplash.jpg" alt="Flowers" style="width:100%">
                 <div class="caption">
-                  <h2>Nature</h2>
+                  <h2 style="color:whitesmoke;">Nature</h2>
                   <br><br><br>
                 </div>
               </a>
@@ -54,34 +66,31 @@
               <a href="food.html" >
                 <img src="Images\marius-girard-wpRzMHFSGo8-unsplash.jpg" alt="Cake" style="width:100%">
                 <div class="caption">
-                  <h2>Food</h2>
+                  <h2 style="color:whitesmoke;">Food</h2>
                   <br><br><br>
-                </div>
-              </a>
+                </div> 
+                  </a>
             </div>
           </div>
-          </div>
         </div>
-      </div>
-      <div class="container offset-2 col-8" >
-      </div class="container">
-      <h2> Sample Images</h2>
-      </div>
-      <div id="carouselExampleIndicators" class="carousel slide offset-2 col-8" data-ride="carousel">
+        
+        <h2> Sample Images</h2>
+      <div class="col-12">
+      <div id="carouselExampleIndicators" class="carousel slide offset-sm-3 col-6" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner col-12">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="Images\alana-harris-y2Bq9tgYnyw-unsplash.jpg" alt="Nature1">
+            <img class="d-block w-100" src="Images\bogdan-kupriets-BD_schehb04-unsplash.jpg" alt="Nature1">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Images\amirali-mirhashemian-7NYn7YfpaZo-unsplash.jpg" alt="Food1">
+            <img class="d-block w-100" src="Images\dustin-humes-ef6s_c5-5Dk-unsplash.jpg" alt="Food1">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="Images\joseph-gonzalez-hTR1XPtTo_k-unsplash.jpg" alt="Food2">
+            <img class="d-block w-100" src="Images\luke-schobert-dMWXBzhiYT4-unsplash.jpg" alt="Food2">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -94,6 +103,16 @@
         </a>
       </div>
     </div>
+    </div>
+                </div>
+            
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      
 
 
 
