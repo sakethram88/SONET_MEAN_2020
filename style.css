@@ -44,18 +44,37 @@ h4{
     color:whitesmoke;
 }
 .jumbotron {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: center center;
-    background-color: rgb(196, 252, 233);
-    background-image: "scott-webb-3g3fLohPFzk-unsplash.jpg";
-    background-size: cover;
-    text-align: center;
-    color: rgb(0, 0, 0);
+    position:relative;
+    overflow:hidden;
+    margin-bottom: 0%;
   }
   
-  .jumbotron h1 {
-    font-size: 70px;
-    margin-bottom: 0;
+  .jumbotron .container {
+    position:relative;
+    z-index:2;
+    
+    background:rgba(0,0,0,0.3);
+    padding:2rem;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+  }
+  
+  .jumbotron-background {
+    object-fit:cover;
+    font-family: 'object-fit: cover;';
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    opacity:0.5;
+  }
+  
+  img.blur {
+      -webkit-filter: blur(4px);
+      filter: blur(4px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+  
   }
 .thumbnail:hover{
         -webkit-transform: scale(0.9);
@@ -79,5 +98,26 @@ h4{
  }
  h2{
      text-align: center;
+     font-family: Verdana, Geneva, sans-serif;
  }
-  
+ .modal-backdrop {
+    z-index:-1;
+  }
+  .modal{
+      z-index: 1;
+      background:rgba(0,0,0,0.3);
+    padding:2rem;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+  }
+  .modal-backdrop.show{
+      opacity: 0.5;
+  }
+  h3{
+      font-family: Verdana, Geneva, sans-serif;
+  }
+.navbar{
+    background:rgba(0,0,0,0.3);
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+}
