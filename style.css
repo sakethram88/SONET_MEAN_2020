@@ -109,3 +109,17 @@ h4{
 .navbar{
     background:rgba(0,0,0,0.3);
 }
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  table tbody {
+    display: table;
+    width: 100%;
+  }
+  table thead {
+    display: table;
+    width: 100%;
+  }
