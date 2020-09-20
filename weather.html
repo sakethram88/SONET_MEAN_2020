@@ -43,8 +43,9 @@
                 <div class="navbar-nav">
                   <a class="nav-item nav-link" style="color: whitesmoke;" href="index.html" tabindex="-1" aria-disabled="true">Home</a>
                   <a class="nav-item nav-link" style="color: whitesmoke;" href="gallery.html" >Photo Gallery</a>
+                  <a class="nav-item nav-link active disabled"  href="dynamicjs.html">Weather</a>
                   <a class="nav-item nav-link" style="color: whitesmoke;" href="contactus.html">Contact Us</a>
-                  <a class="nav-item nav-link active disabled"  href="dynamicjs.html">Join Us</a>
+                  <a class="nav-item nav-link" style="color: whitesmoke;" href="dynamicjs.html">Join Us</a>
                   
             
                   
@@ -118,11 +119,11 @@
                
                document.getElementById("detailstable").removeAttribute("hidden");
                document.getElementById("name").innerHTML = data.list[value].name;
-               document.getElementById("ctemp").innerHTML = data.list[value].main.temp;
-               document.getElementById("mintemp").innerHTML = data.list[value].main.temp_min;
-               document.getElementById("maxtemp").innerHTML = data.list[value].main.temp_max;
-               document.getElementById("wspeed").innerHTML = data.list[value].wind.speed;
-               document.getElementById("hum").innerHTML = data.list[value].main.humidity;
+               document.getElementById("ctemp").innerHTML = data.list[value].main.temp +"&#8451";
+               document.getElementById("mintemp").innerHTML = data.list[value].main.temp_min +"&#8451";
+               document.getElementById("maxtemp").innerHTML = data.list[value].main.temp_max +"&#8451";
+               document.getElementById("wspeed").innerHTML = data.list[value].wind.speed+" m/s";
+               document.getElementById("hum").innerHTML = data.list[value].main.humidity+"%";
 
             }
         </script>
