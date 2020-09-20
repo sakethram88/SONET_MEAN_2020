@@ -8,7 +8,7 @@
     <title>Weather</title>
     <script>
         var request = new XMLHttpRequest();
-        request.open('GET','https://api.openweathermap.org/data/2.5/group?id=1176734,1261481,2643741,2950158,2968815&appid=071705e45547dbebb6201970279959f2',true)
+        request.open('GET','https://api.openweathermap.org/data/2.5/group?id=1176734,1261481,2643741,2950158,2968815&units=metric&appid=071705e45547dbebb6201970279959f2',true)
        request.onload = function(){
            if(request.status >=200 && request.status!=404){
                //succcess
@@ -32,8 +32,8 @@
         </div>
         
         <div class="container text-white">
-          <h1 class="display-4">Join Us</h1>
-          <p class="lead">Register to join SONET</p>
+          <h1 class="display-4">Weather</h1>
+          <p class="lead">Select a city below to view its live weather</p>
           <div>
             <hr class="my-4">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="margin-top: 0%;" >
@@ -58,11 +58,55 @@
                   <br>
           </div>
           <div>
-            <h1> This should display weather in Hyd!</h1>
             <div id="temp"> hey there</div>
+            
+            <div class="container box-body">
+                <form>
+                  <div class="form-group row">
+                      <h3>Select a City</h3>
+                    <div class="col-sm-5">
+                      <select class="form-control selectpicker" id="select-country" data-live-search="true" onchange="changeFunc(value);">
+                      <option data-tokens="hyderabad" value="0">Hyderabad</option>
+                      <option data-tokens="delhi" value="1">Delhi</option>
+                      <option data-tokens="london" value="2">London</option>
+                      </select>
+      
+                    </div>
+                  </div>
+                </form>
+              
+
+              <div>
+                <table class="table text-white table-responsive col-12">
+                      <thead class="thead-outline-dark">
+                        <tr>
+                          <th>Name</th>
+                          <th>Current Temperature</th>
+                          <th>Minimum Temperature</th>
+                          <th>Maximum Temperature</th>
+                          <th>Wind Speed</th>
+                          <th>Humidity</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          
+                      </tbody>
+                    </table>
+                    
+                </div>
+            </div>
           </div>
           <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script>
+            function changeFunc(value){
+                var data = JSON.parse(request.responseText);
+               console.log(data);
+               
+               document.getElementById("temp").innerHTML = data.list[value].main.temp;
+
+            }
+        </script>
 </body>
 </html>
