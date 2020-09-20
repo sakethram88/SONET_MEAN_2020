@@ -57,15 +57,15 @@
                   <hr>
                   <br>
           </div>
-          <div>
-            <div id="temp"> hey there</div>
+          
             
             <div class="container box-body">
                 <form>
                   <div class="form-group row">
-                      <h3>Select a City</h3>
+                      <h3 style="margin-left: 3%;">Select a City</h3>
                     <div class="col-sm-5">
-                      <select class="form-control selectpicker" id="select-country" data-live-search="true" onchange="changeFunc(value);">
+                      <select class="form-control selectpicker" title="City" id="select-country" data-live-search="true" onchange="changeFunc(value);">
+                      <option value="" selected disabled>Please select</option>
                       <option data-tokens="hyderabad" value="0">Hyderabad</option>
                       <option data-tokens="delhi" value="1">Delhi</option>
                       <option data-tokens="london" value="2">London</option>
@@ -77,19 +77,26 @@
               
 
               <div>
-                <table class="table text-white table-responsive col-12">
+                <table class="table text-white table-responsive col-12" id="detailstable" hidden="true">
                       <thead class="thead-outline-dark">
                         <tr>
-                          <th>Name</th>
-                          <th>Current Temperature</th>
-                          <th>Minimum Temperature</th>
-                          <th>Maximum Temperature</th>
-                          <th>Wind Speed</th>
-                          <th>Humidity</th>
+                          <th style="vertical-align:top;">Name<br></th>
+                          <th>Current<br> Temperature</th>
+                          <th>Minimum<br> Temperature</th>
+                          <th>Maximum <br>Temperature</th>
+                          <th style="vertical-align:top;">Wind Speed</th>
+                          <th style="vertical-align:top;">Humidity</th>
                         </tr>
                       </thead>
                       <tbody>
-                          
+                          <tr>
+                            <td id="name"></td>
+                            <td id="ctemp"></td>  
+                            <td id="mintemp"></td>
+                            <td id="maxtemp"></td>
+                            <td id="wspeed"></td>
+                            <td id="hum"></td>
+                          </tr>
                       </tbody>
                     </table>
                     
@@ -104,7 +111,13 @@
                 var data = JSON.parse(request.responseText);
                console.log(data);
                
-               document.getElementById("temp").innerHTML = data.list[value].main.temp;
+               document.getElementById("detailstable").removeAttribute("hidden");
+               document.getElementById("name").innerHTML = data.list[value].name;
+               document.getElementById("ctemp").innerHTML = data.list[value].main.temp;
+               document.getElementById("mintemp").innerHTML = data.list[value].main.temp_min;
+               document.getElementById("maxtemp").innerHTML = data.list[value].main.temp_max;
+               document.getElementById("wspeed").innerHTML = data.list[value].wind.speed;
+               document.getElementById("hum").innerHTML = data.list[value].main.humidity;
 
             }
         </script>
