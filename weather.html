@@ -8,14 +8,12 @@
     <title>Weather</title>
     <script>
         var request = new XMLHttpRequest();
-        request.open('GET','https://api.openweathermap.org/data/2.5/group?id=1176734,1261481,2643741,2950158,2968815&units=metric&appid=071705e45547dbebb6201970279959f2',true)
+        request.open('GET','https://api.openweathermap.org/data/2.5/group?id=2950158,1264527,1273294,1269843,745044,2643743,3117735,5128638,6455259,1850147&units=metric&appid=071705e45547dbebb6201970279959f2',true)
        request.onload = function(){
            if(request.status >=200 && request.status!=404){
                //succcess
                var data = JSON.parse(request.responseText);
                console.log(data);
-               
-               document.getElementById("temp").innerHTML = data.list[0].main.temp;
            }
            else
            console.log("error");
@@ -66,9 +64,16 @@
                     <div class="col-sm-5">
                       <select class="form-control selectpicker" title="City" id="select-country" data-live-search="true" onchange="changeFunc(value);">
                       <option value="" selected disabled>Please select</option>
-                      <option data-tokens="hyderabad" value="0">Hyderabad</option>
-                      <option data-tokens="delhi" value="1">Delhi</option>
-                      <option data-tokens="london" value="2">London</option>
+                      <option data-tokens="Berlin" value="0">Berlin</option>
+                      <option data-tokens="Chennai" value="1">Chennai</option>
+                      <option data-tokens="Delhi" value="2">Delhi</option>
+                      <option data-tokens="Hyderabad" value="3">Hyderabad</option>
+                      <option data-tokens="Istanbul" value="4">Istanbul</option>
+                      <option data-tokens="London" value="5">London</option>
+                      <option data-tokens="Madrid" value="6">Madrid</option>
+                      <option data-tokens="New York" value="7">New York</option>
+                      <option data-tokens="Paris" value="8">Paris</option>
+                      <option data-tokens="Tokyo" value="9">Tokyo</option>
                       </select>
       
                     </div>
