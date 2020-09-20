@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
+    <script>
+        var request = new XMLHttpRequest();
+        request.open('GET','https://api.openweathermap.org/data/2.5/group?id=1176734,1261481,2643741,2950158,2968815&appid=071705e45547dbebb6201970279959f2',true)
+       request.onload = function(){
+           if(request.status >=200 && request.status!=404){
+               //succcess
+               var data = JSON.parse(request.responseText);
+               console.log(data);
+               
+               document.getElementById("temp").innerHTML = data.list[0].main.temp;
+           }
+           else
+           console.log("error");
+       };
+       request.send();
+       
+           </script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid bg-dark">
+  
+        <div class="jumbotron-background">
+          <img src="Images\igor-kasalovic-tNDvFkxkBHo-unsplash.jpg" class="blur">
+        </div>
+        
+        <div class="container text-white">
+          <h1 class="display-4">Join Us</h1>
+          <p class="lead">Register to join SONET</p>
+          <div>
+            <hr class="my-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="margin-top: 0%;" >
+              <a class="navbar-brand" style="color: whitesmoke;" href="index.html">SONET</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-item nav-link" style="color: whitesmoke;" href="index.html" tabindex="-1" aria-disabled="true">Home</a>
+                  <a class="nav-item nav-link" style="color: whitesmoke;" href="gallery.html" >Photo Gallery</a>
+                  <a class="nav-item nav-link" style="color: whitesmoke;" href="contactus.html">Contact Us</a>
+                  <a class="nav-item nav-link active disabled"  href="dynamicjs.html">Join Us</a>
+                  
+            
+                  
+                      </div>
+                    </div>
+                    
+                  </nav>
+                  <hr>
+                  <br>
+          </div>
+          <div>
+            <h1> This should display weather in Hyd!</h1>
+            <div id="temp"> hey there</div>
+          </div>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
