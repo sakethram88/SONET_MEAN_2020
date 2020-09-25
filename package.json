@@ -19,5 +19,8 @@
   "homepage": "https://github.com/sakethram88/SONET_MEAN_2020#readme",
   "dependencies": {
     "lite-server": "^2.5.4"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3"
   }
 }
